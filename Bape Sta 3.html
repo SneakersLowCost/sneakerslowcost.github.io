@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Louis Vuitton</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="productos.js"></script>
+</head>
+<body>
+  <header>
+<div class="logo">SneakerLowCost</div>
+<nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="productos.html">Productos</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+<!-- Icono del carrito -->
+<div id="cart-icon">
+<img alt="Carrito" src="carritocompra.png"/>
+<span id="cart-count">0</span>
+</div>
+<!-- Carrito desplegable -->
+<div id="cart">
+<h2>Carrito de Compras</h2>
+<div id="cart-items"></div>
+<p>Total: $<span id="cart-total">0.00</span></p>
+<button id="clear-cart">Vaciar Carrito</button>
+<button class="btn-comprar" onclick="window.location.href='checkout.html'">Comprar</button>
+
+</div>
+</nav>
+</header>
+
+  <div id="cart">
+    <h2>Carrito</h2>
+    <div id="cart-items"></div>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button id="clear-cart">Vaciar Carrito</button>
+  </div>
+
+  <main class="producto-individual">
+    <div class="producto-detalle">
+      <div class="imagen-producto">
+        <img src="Bape Sta 3.jpg" alt="Nike Quest 6">
+      </div>
+      <div class="info-producto">
+        <h1>Bape Sta 3</h1>
+        <p class="precio">Precio: 210.00 €</p>
+
+        <div class="opciones">
+          <label for="talla">Talla</label>
+          <select id="talla">
+            <option>36</option><option>37</option><option>38</option>
+            <option>39</option><option>40</option><option>41</option>
+            <option>42</option><option>43</option><option>44</option>
+          </select>
+
+          <label for="color">Color</label>
+          <select id="color">
+            <option>Negro</option>
+            <option>Blanco</option>
+            <option>Gris</option>
+            <option>Rojo</option>
+          </select>
+        </div>
+
+        <button class="btn-agregar" onclick="agregarAlCarrito('Bape Sta 3', 210.00)">Añadir al carrito</button>
+	<button class="btn-comprar" onclick="window.location.href='checkout.html'">Comprar ya</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SneakerLowCost. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

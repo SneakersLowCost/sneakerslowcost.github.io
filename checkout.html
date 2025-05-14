@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Compra</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="checkout.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">SneakerLowCost</div>
+  </header>
+
+  <main class="checkout">
+    <h1>Finalizar Compra</h1>
+    <form id="formulario-compra">
+      <h2>Datos personales</h2>
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <input type="tel" placeholder="Teléfono" required>
+
+      <h2>Dirección de envío</h2>
+      <input type="text" placeholder="Dirección" required>
+      <input type="text" placeholder="Ciudad" required>
+      <input type="text" placeholder="Código postal" required>
+      <input type="text" placeholder="País" required>
+
+      <h2>Datos de pago</h2>
+      <input type="text" placeholder="Número de tarjeta" required>
+      <input type="text" placeholder="Fecha de caducidad (MM/AA)" required>
+      <input type="text" placeholder="CVV" required>
+
+      <button type="submit" class="btn-comprar">Comprar</button>
+    </form>
+  </main>
+</body>
+</html>

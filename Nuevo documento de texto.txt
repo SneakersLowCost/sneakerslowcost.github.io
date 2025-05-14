@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nombre del Producto</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="productos.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">SneakerLowCost</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div id="cart-icon">
+      <img src="carritocompra.png" alt="Carrito" />
+      <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <div id="cart">
+    <h2>Carrito</h2>
+    <div id="cart-items"></div>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button id="clear-cart">Vaciar Carrito</button>
+  </div>
+
+  <main class="producto-individual">
+    <div class="producto-detalle">
+      <img src="nombre-del-archivo.jpg" alt="Nombre del Producto">
+      <div class="info">
+        <h1>Nombre del Producto</h1>
+        <p class="precio">Precio: 89.99 €</p>
+
+        <label for="talla">Talla:</label>
+        <select id="talla">
+          <option>36</option>
+          <option>37</option>
+          <option>38</option>
+          <option>39</option>
+          <option>40</option>
+          <option>41</option>
+          <option>42</option>
+          <option>43</option>
+        </select>
+
+        <label for="color">Color:</label>
+        <select id="color">
+          <option>Negro</option>
+          <option>Blanco</option>
+          <option>Gris</option>
+          <option>Rojo</option>
+        </select>
+
+        <button onclick="agregarAlCarrito('Nombre del Producto', 89.99)">Añadir al carrito</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SneakerLowCost. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

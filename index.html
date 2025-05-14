@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Zapatillas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navegación -->
+   <header>
+    <div class="logo">SneakerLowCost</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <!-- Icono del carrito integrado en el nav -->
+        <div id="cart-icon">
+            <img src="carritocompra.png" alt="Carrito" />
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+</header>
+
+<!-- Carrito desplegable (fuera del nav pero dentro del body) -->
+<div id="cart">
+    <h2>Carrito de Compras</h2>
+    <div id="cart-items"></div>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <button id="clear-cart">Vaciar Carrito</button>
+    <button class="btn-comprar" onclick="window.location.href='checkout.html'">Comprar</button>
+</div>
+
+
+    <!-- Sección de Bienvenida -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Las Mejores Zapatillas <span class="destacado">a un clic</span></h1>
+            <p>Descubre los últimos modelos con ofertas exclusivas.</p>
+            <a href="productos.html" class="btn">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- Galería de Productos Destacados -->
+    <section class="galeria">
+        <h2>Destacados</h2>
+        <div class="imagenes">
+            <img src="close-up1.jpg" alt="Zapatilla 1">
+            <img src="close-up2.jpeg" alt="Zapatilla 2">
+            <img src="close-up3.jpg" alt="Zapatilla 3">
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section class="sobre-nosotros">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="beneficios">
+            <div class="beneficio">
+                <img src="Envío rápido.png" alt="Envío rápido">
+                <p>Envíos en 24h</p>
+            </div>
+            <div class="beneficio">
+                <img src="Descuento icono.png" alt="Descuentos exclusivos">
+                <p>Grandes descuentos</p>
+            </div>
+            <div class="beneficio">
+                <img src="Quality.png" alt="Máxima calidad">
+                <p>Máxima calidad</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2025 SneakerStore. Todos los derechos reservados.</p>
+        <div class="redes">
+            <a href="https://www.facebook.com/groups/1122472134554262?locale=es_ES"><img src="Facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/platanosneaker/"><img src="Instagram.png" alt="Instagram"></a>
+            <a href="https://x.com/?lang=es"><img src="Twitter.png" alt="Twitter"></a>
+        </div>
+    </footer>
+</body>
+</html>

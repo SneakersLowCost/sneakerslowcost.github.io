@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Productos - SneakerLowCost</title>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="productos.js"></script>
+</head>
+<body>
+<header>
+<div class="logo">SneakerLowCost</div>
+<nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="productos.html">Productos</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+<!-- Icono del carrito -->
+<div id="cart-icon">
+<img alt="Carrito" src="carritocompra.png"/>
+<span id="cart-count">0</span>
+</div>
+<!-- Carrito desplegable -->
+<div id="cart">
+<h2>Carrito de Compras</h2>
+<div id="cart-items"></div>
+<p>Total: $<span id="cart-total">0.00</span></p>
+<button id="clear-cart">Vaciar Carrito</button>
+<button class="btn-comprar" onclick="window.location.href='checkout.html'">Comprar</button>
+</div>
+</nav>
+</header>
+<main class="productos-main">
+<h1>Nuestros Productos</h1>
+<!-- Filtro por género -->
+<div class="genero-filtro">
+<button class="genero-btn activo" data-genero="todos">Todos</button>
+<button class="genero-btn" data-genero="hombre">Hombre</button>
+<button class="genero-btn" data-genero="mujer">Mujer</button>
+</div>
+<!-- Categorías -->
+<div class="categorias">
+<button class="categoria-btn activo" data-categoria="todos">Todos</button>
+<button class="categoria-btn" data-categoria="deportes">Deportes</button>
+<button class="categoria-btn" data-categoria="casual">Casual</button>
+<button class="categoria-btn" data-categoria="urbano">Urbano</button>
+<button class="categoria-btn" data-categoria="botas">Botas</button>
+<button class="categoria-btn" data-categoria="piscina">Piscina</button>
+</div>
+<!-- Grid de productos -->
+<div class="productos-grid">
+<!-- Producto ejemplo -->
+<div class="producto-card" data-categoria="deportes" data-genero="hombre">
+<a href="Under Armour.html">
+<img alt="Zapatilla 1" src="Under Armour.jpg"/>
+<h3>Under Armour</h3>
+<p>57.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Under Armour', 57.95)" type="button">Añadir al carrito</button>
+</div>
+<div class="producto-card" data-categoria="deportes" data-genero="hombre">
+<a href="Nike Quest 6.html">
+<img alt="Zapatilla 1" src="Nike Quest 6.jpg"/>
+<h3>Nike Quest 6</h3>
+<p>79.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Quest 6', 79.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="mujer">
+<a href="Under Armour W.html">
+<img alt="Zapatilla 1" src="Under Armour W.jpg"/>
+<h3>Under Armour</h3>
+<p>36.49 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Under Armour', 36.49)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="hombre">
+<a href="Nike Air Monarch.html">
+<img alt="Zapatilla 1" src="Nike Air Monarch.jpg"/>
+<h3>Nike Air Monarch</h3>
+<p>68.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Air Monarch', 68.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="hombre">
+<a href="Adidas Adizero Boston 12.html">
+<img alt="Zapatilla 1" src="Adidas Adizero Boston 12.jpg"/>
+<h3>Adidas Adizero Boston 12</h3>
+<p>127.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Adidas Adizero Boston 12', 127.95)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="hombre">
+<a href="Nike MC Trainer 3.html">
+<img alt="Zapatilla 1" src="Nike MC Trainer 3.jpg"/>
+<h3>Nike MC Trainer 3</h3>
+<p>79.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike MC Trainer 3', 79.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="hombre">
+<a href="Asics Magic Speed 4.html">
+<img alt="Zapatilla 1" src="Asics Magic Speed 4.jpg"/>
+<h3>Asics Magic Speed 4</h3>
+<p>179.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Asics Magic Speed 4', 179.95)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="hombre">
+<a href="Puma Deviate Nitro 3.html">
+<img alt="Zapatilla 1" src="Puma Deviate Nitro 3.jpg"/>
+<h3>Puma Deviate Nitro 3</h3>
+<p>79.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Puma Deviate Nitro 3', 79.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="hombre">
+<a href="Nike Pegasus 41.html">
+<img alt="Zapatilla 1" src="Nike Pegasus 41.jpg"/>
+<h3>Nike Pegasus 41</h3>
+<p>112.00 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Pegasus 41', 112.00)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="hombre">
+<a href="On Running Cloudflow 4.html">
+<img alt="Zapatilla 1" src="On Running Cloudflow 4.jpg"/>
+<h3>On Running Cloudflow 4</h3>
+<p>107.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('On Running Cloudflow 4', 107.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="mujer">
+<a href="Puma Disperse.html">
+<img alt="Zapatilla 1" src="Puma Disperse.jpg"/>
+<h3>Puma Disperse</h3>
+<p>33,00 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Puma Disperse', 33.00)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="mujer">
+<a href="On Running Cloudtilt.html">
+<img alt="Zapatilla 1" src="On Running Cloudtilt.jpg"/>
+<h3>On Running Cloudtilt</h3>
+<p>170,00 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('On Running Cloudtilt', 170.00)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="mujer">
+<a href="Hoka Rincon 4.html">
+<img alt="Zapatilla 1" src="Hoka Rincon 4.jpg"/>
+<h3>Hoka Rincon 4</h3>
+<p>129,99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Hoka Rincon 4', 129.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="mujer">
+<a href="Nike Metcon 6.html">
+<img alt="Zapatilla 1" src="Nike Metcon 6.jpg"/>
+<h3>Nike Metcon 6</h3>
+<p>129,99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Metcon 6', 129.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="mujer">
+<a href="Nike P-6000.html">
+<img alt="Zapatilla 1" src="Nike P-6000.jpg"/>
+<h3>Nike P-6000</h3>
+<p>109,99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike P-6000', 109.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="mujer">
+<a href="Nike Initiator.html">
+<img alt="Zapatilla 1" src="Nike Initiator.jpg"/>
+<h3>Nike Initiator</h3>
+<p>79,99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Initiator', 79.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="mujer">
+<a href="New Balance 530.html">
+<img alt="Zapatilla 1" src="New Balance 530.jpg"/>
+<h3>New Balance 530</h3>
+<p>120,00 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('New Balance 530', 120.00)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="deportes" data-genero="mujer">
+<a href="Skechers Graceful.html">
+<img alt="Zapatilla 1" src="Skechers Graceful.jpg"/>
+<h3>Skechers Graceful</h3>
+<p>38,55 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Skechers Graceful', 38.55)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="hombre">
+<a href="Adidas VL Court 3.0.html">
+<img alt="Zapatilla 2" src="Adidas VL Court 3.0.jpg"/>
+<h3>Adidas VL Court 3.0</h3>
+<p>44.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Adidas VL Court 3.0', 44.95)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="hombre">
+<a href="Tommy Hilfiger Essential.html">
+<img alt="Zapatilla 2" src="Tommy Hilfiger Essential.jpg"/>
+<h3>Tommy Hilfiger Essential</h3>
+<p>64.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Tommy Hilfiger Essential', 64.95)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="hombre">
+<a href="Adidas Urban Court.html">
+<img alt="Zapatilla 2" src="Adidas Urban Court.jpg"/>
+<h3>Adidas Urban Court</h3>
+<p>37.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Adidas Urban Court', 37.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="hombre">
+<a href="Vans brooklyn ls.html">
+<img alt="Zapatilla 2" src="Vans brooklyn ls.jpg"/>
+<h3>Vans brooklyn ls</h3>
+<p>51.45 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Vans brooklyn ls', 51.45)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="hombre">
+<a href="Adidas Samba OG.html">
+<img alt="Zapatilla 2" src="Adidas Samba OG.jpg"/>
+<h3>Adidas Samba OG</h3>
+<p>119.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Adidas Samba OG', 119.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="hombre">
+<a href="Puma Club II Era.html">
+<img alt="Zapatilla 2" src="Puma Club II Era.jpg"/>
+<h3>Puma Club II Era</h3>
+<p>41.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Puma Club II Era', 41.95)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="hombre">
+<a href="Lacoste Elite ACTIVE.html">
+<img alt="Zapatilla 2" src="Lacoste Elite ACTIVE.jpg"/>
+<h3>Lacoste Elite ACTIVE</h3>
+<p>150.00 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Lacoste Elite ACTIVE', 150.00)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="hombre">
+<a href="Pepe Jeans Kenton Court.html">
+<img alt="Zapatilla 2" src="Pepe Jeans Kenton Court.jpg"/>
+<h3>Pepe Jeans Kenton Court</h3>
+<p>44.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Pepe Jeans Kenton Court', 44.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="hombre">
+<a href="Skechers Court Break.html">
+<img alt="Zapatilla 2" src="Skechers Court Break.jpg"/>
+<h3>Skechers Court Break</h3>
+<p>79.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Skechers Court Break', 79.95)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="mujer">
+<a href="Tommy Hilfiger Essential W.html">
+<img alt="Zapatilla 2" src="Tommy Hilfiger Essential W.jpg"/>
+<h3>Tommy Hilfiger Essential W</h3>
+<p>66.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Tommy Hilfiger Essential W', 66.95)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="mujer">
+<a href="Puma Club II Era W.html">
+<img alt="Zapatilla 2" src="Puma Club II Era W.jpg"/>
+<h3>Puma Club II Era W</h3>
+<p>67.60 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Puma Club II Era W', 67.60)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="mujer">
+<a href="Calvin Klein Flatform.html">
+<img alt="Zapatilla 2" src="Calvin Klein Flatform.jpg"/>
+<h3>Calvin Klein Flatform</h3>
+<p>79.90 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Calvin Klein Flatform', 79.90)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="mujer">
+<a href="Victoria Berlin.html">
+<img alt="Zapatilla 2" src="Victoria Berlin.jpg"/>
+<h3>Victoria Berlin</h3>
+<p>75.90 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Victoria Berlin', 75.90)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="mujer">
+<a href="Nike Field.html">
+<img alt="Zapatilla 2" src="Nike Field.jpg"/>
+<h3>Nike Field</h3>
+<p>99.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Field', 99.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="mujer">
+<a href="Puma Carina Street.html">
+<img alt="Zapatilla 2" src="Puma Carina Street.jpg"/>
+<h3>Puma Carina Street</h3>
+<p>44.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Puma Carina Street', 44.95)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="mujer">
+<a href="MTNG 60441.html">
+<img alt="Zapatilla 2" src="MTNG 60441.jpg"/>
+<h3>MTNG 60441</h3>
+<p>27.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('MTNG 60441', 27.95)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="mujer">
+<a href="Guess Mujer ENERGY2.html">
+<img alt="Zapatilla 2" src="Guess Mujer ENERGY2.jpg"/>
+<h3>Guess Mujer ENERGY2</h3>
+<p>135.00 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Guess Mujer ENERGY2', 135.00)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="casual" data-genero="mujer">
+<a href="Skechers Zapatillas Og 85.html">
+<img alt="Zapatilla 2" src="Skechers Zapatillas Og 85.jpg"/>
+<h3>Skechers Zapatillas Og 85</h3>
+<p>47.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Skechers Zapatillas Og 85', 47.95)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="hombre">
+<a href="Nike Air Force 1 '07.html">
+<img alt="Zapatilla 3" src="Nike Air Force 1 '07.jpg"/>
+<h3>Nike Air Force 1 '07</h3>
+<p>119.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Air Force 1 '07', 119.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="hombre">
+<a href="Jordan MVP.html">
+<img alt="Zapatilla 3" src="Jordan MVP.jpg"/>
+<h3>Jordan MVP</h3>
+<p>135.95 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Jordan MVP', 135.95)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="hombre">
+<a href="Jordan Spizike Low.html">
+<img alt="Zapatilla 3" src="Jordan Spizike Low.jpg"/>
+<h3>Jordan Spizike Low</h3>
+<p>169.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Jordan Spizike Low', 169.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="hombre">
+<a href="Jordan Flight Club '91.html">
+<img alt="Zapatilla 3" src="Jordan Flight Club '91.jpg"/>
+<h3>Jordan Flight Club '91</h3>
+<p>119.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Jordan Flight Club '91', 119.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="hombre">
+<a href="Louis Vuitton.html">
+<img alt="Zapatilla 3" src="Louis Vuitton.jpg"/>
+<h3>Louis Vuitton</h3>
+<p>1080.00 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Louis Vuitton', 1080.00)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="hombre">
+<a href="Bape Sta 3.html">
+<img alt="Zapatilla 3" src="Bape Sta 3.jpg"/>
+<h3>Bape Sta 3</h3>
+<p>210.00 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Bape Sta 3', 210.00)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="hombre">
+<a href="CORTEIZ x Nike Air Max 95.html">
+<img alt="Zapatilla 3" src="CORTEIZ x Nike Air Max 95.jpg"/>
+<h3>CORTEIZ x Nike Air Max 95</h3>
+<p>649.00 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('CORTEIZ x Nike Air Max 95', 649.00)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="hombre">
+<a href="Nike Air More Uptempo 96.html">
+<img alt="Zapatilla 3" src="Nike Air More Uptempo 96.jpg"/>
+<h3>Nike Air More Uptempo 96</h3>
+<p>179.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Air More Uptempo 96', 179.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="hombre">
+<a href="Nike Air Max Plus.html">
+<img alt="Zapatilla 3" src="Nike Air Max Plus.jpg"/>
+<h3>Nike Air Max Plus</h3>
+<p>189.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Air Max Plus', 189.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="mujer">
+<a href="Nike Air Force 1 Low.html">
+<img alt="Zapatilla 3" src="Nike Air Force 1 Low.jpg"/>
+<h3>Nike Air Force 1 Low</h3>
+<p>119.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Air Force 1 Low', 119.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="mujer">
+<a href="Air Jordan 11 Retro.html">
+<img alt="Zapatilla 3" src="Air Jordan 11 Retro.jpg"/>
+<h3>Air Jordan 11 Retro</h3>
+<p>269.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Air Jordan 11 Retro', 269.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="mujer">
+<a href="Jordan Aj6 Retro.html">
+<img alt="Zapatilla 3" src="Jordan Aj6 Retro.jpg"/>
+<h3>Jordan Aj6 Retro</h3>
+<p>199.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Jordan Aj6 Retro', 199.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="mujer">
+<a href="Air Jordan 1 Brooklyn Low.html">
+<img alt="Zapatilla 3" src="Air Jordan 1 Brooklyn Low.jpg"/>
+<h3>Air Jordan 1 Brooklyn Low</h3>
+<p>159.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Air Jordan 1 Brooklyn Low', 159.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="mujer">
+<a href="CORTEIZ x Nike Air Max 95.html">
+<img alt="Zapatilla 3" src="CORTEIZ x Nike Air Max 95.jpg"/>
+<h3>CORTEIZ x Nike Air Max 95</h3>
+<p>549.00 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('CORTEIZ x Nike Air Max 95', 549.00)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="mujer">
+<a href="Nike Air More Uptempo 96.html">
+<img alt="Zapatilla 3" src="Nike Air More Uptempo 96.jpg"/>
+<h3>Nike Air More Uptempo 96</h3>
+<p>179.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Air More Uptempo 96', 179.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="mujer">
+<a href="Nike Shox TL.html">
+<img alt="Zapatilla 3" src="Nike Shox TL.jpg"/>
+<h3>Nike Shox TL</h3>
+<p>179.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Shox TL', 179.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="mujer">
+<a href="Nike Dunk Low.html">
+<img alt="Zapatilla 3" src="Nike Dunk Low.jpg"/>
+<h3>Nike Dunk Low</h3>
+<p>83.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Dunk Low', 83.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="urbano" data-genero="mujer">
+<a href="Nike Air Force 1 '07 W.html">
+<img alt="Zapatilla 3" src="Nike Air Force 1 '07 W.jpg"/>
+<h3>Nike Air Force 1 '07</h3>
+<p>119.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Air Force 1 '07', 119.99)" type="button">Añadir al carrito</button></div>
+<div class="producto-card" data-categoria="botas" data-genero="hombre">
+<a href="Air Jordan 1 Retro High OG.html">
+<img alt="Zapatilla 3" src="Air Jordan 1 Retro High OG.jpg"/>
+<h3>Air Jordan 1 Retro High OG</h3>
+<p>189.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Air Jordan 1 Retro High OG', 189.99)" type="button">Añadir al carrito</button></div>
+
+<!-- Añade más productos aquí con distintas categorías -->
+
+<div class="producto-card" data-categoria="botas" data-genero="hombre">
+<a href="Nike Blazer Mid 77.html">
+<img alt="Zapatilla 1" src="Nike Blazer Mid 77.jpg"/>
+<h3>Nike Blazer Mid 77</h3>
+<p>75.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Blazer Mid 77', 75.99)" type="button">Añadir al carrito</button>
+</div>
+
+<div class="producto-card" data-categoria="botas" data-genero="hombre">
+<a href="Converse Star Player 76.html">
+<img alt="Zapatilla 1" src="Converse Star Player 76.jpg"/>
+<h3>Converse Star Player 76</h3>
+<p>84.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Converse Star Player 76', 84.99)" type="button">Añadir al carrito</button>
+</div>
+
+<div class="producto-card" data-categoria="botas" data-genero="mujer">
+<a href="Air Jordan 1 High Zoom.html">
+<img alt="Zapatilla 1" src="Air Jordan 1 High Zoom.jpg"/>
+<h3>Air Jordan 1 High Zoom</h3>
+<p>135.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Air Jordan 1 High Zoom', 135.99)" type="button">Añadir al carrito</button>
+</div>
+
+<div class="producto-card" data-categoria="botas" data-genero="mujer">
+<a href="Nike Blazer Mid 77.html">
+<img alt="Zapatilla 1" src="Nike Blazer Mid 77.jpg"/>
+<h3>Nike Blazer Mid 77</h3>
+<p>75.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Blazer Mid 77', 75.99)" type="button">Añadir al carrito</button>
+</div>
+
+<div class="producto-card" data-categoria="botas" data-genero="mujer">
+<a href="Converse Chuck 70 Lace.html">
+<img alt="Zapatilla 1" src="Converse Chuck 70 Lace.jpg"/>
+<h3>Converse Chuck 70 Lace</h3>
+<p>69.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Converse Chuck 70 Lace', 69.99)" type="button">Añadir al carrito</button>
+</div>
+
+<div class="producto-card" data-categoria="piscina" data-genero="mujer" >
+<a href="Nike Victori One.html">
+<img alt="Zapatilla 1" src="Nike Victori One.jpg"/>
+<h3>Nike Victori One</h3>
+<p>22.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Victori One', 22.99)" type="button">Añadir al carrito</button>
+</div>
+
+<div class="producto-card" data-categoria="piscina" data-genero="mujer">
+<a href="Puma Popcat 20.html">
+<img alt="Zapatilla 1" src="Puma Popcat 20.jpg"/>
+<h3>Puma Popcat 20</h3>
+<p>14.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Puma Popcat 20', 14.99)" type="button">Añadir al carrito</button>
+</div>
+
+<div class="producto-card" data-categoria="piscina" data-genero="mujer" data-genero="hombre">
+<a href="Jordan Jumpman.html">
+<img alt="Zapatilla 1" src="Jordan Jumpman.jpg"/>
+<h3>Jordan Jumpman</h3>
+<p>35.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Jordan Jumpman', 35.99)" type="button">Añadir al carrito</button>
+</div>
+
+<div class="producto-card" data-categoria="piscina" data-genero="hombre" >
+<a href="Nike Victori One.html">
+<img alt="Zapatilla 1" src="Nike Victori One.jpg"/>
+<h3>Nike Victori One</h3>
+<p>22.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Nike Victori One', 22.99)" type="button">Añadir al carrito</button>
+</div>
+
+<div class="producto-card" data-categoria="piscina" data-genero="hombre">
+<a href="Puma Popcat 20.html">
+<img alt="Zapatilla 1" src="Puma Popcat 20.jpg"/>
+<h3>Puma Popcat 20</h3>
+<p>14.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Puma Popcat 20', 14.99)" type="button">Añadir al carrito</button>
+</div>
+
+<div class="producto-card" data-categoria="piscina" data-genero="hombre" data-genero="hombre">
+<a href="Jordan Jumpman.html">
+<img alt="Zapatilla 1" src="Jordan Jumpman.jpg"/>
+<h3>Jordan Jumpman</h3>
+<p>35.99 €</p>
+</a>
+<button class="btn-agregar" onclick="agregarAlCarrito('Jordan Jumpman', 35.99)" type="button">Añadir al carrito</button>
+</div>
+
+</div>
+</main>
+<footer>
+<p>© 2025 SneakerLowCost. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
